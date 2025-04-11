@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <div><%= title %></div>
+    <ul>
+      <% for(let i = 0; i < messages.length; i++) { %>
+      <li>
+        <div>Message: <%= messages[i].text %></div>
+        <div>By: <%= messages[i].user %></div>
+        <div>Added: <%= messages[i].added %></div>
+        <a href="/messages/<%= i%>"> Open</a>
+      </li>
+      <% } %>
+    </ul>
+    <a href="/new">New Message</a>
+  </body>
+</html>
